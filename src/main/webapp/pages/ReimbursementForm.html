@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1 id= "formTitle">Reimbursement Application</h1>
+    
+    
+    <br>
+    <h2 id = "empInfoHeader">Employee Information</h2>
+    <br>
+  <form>
+  <label for="firstName"></label>
+  <input type="text" id="firstName" name="firstName" placeholder="First Name">
+    <br><br>
+  <label for="lastName"></label>
+  <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+       <br><br>
+  <label for="employeeId"></label>
+  <input type="text" id="employeeId" name="employeeId" placeholder="Employee ID">
+      <br><br>
+      
+       <label for="managerPosition">Direct Supervisor's Position</label>
+      <select id = "managerPosition">
+         <option value="Detention Captain">Detention Captain</option> 
+          <option value="Patrol Captain">Patrol Captain</option>
+             <option value="CID Captain">Detention Captain</option>
+          <option value="Detention Sergeant">Detention Sergeant</option>
+             <option value="Patrol Sergeant">Patrol Sergeant</option>
+          <option value="CID Sergeant">CID Sergeant</option>
+          <option value="Lieutenant">Lieutenant</option>
+             <option value="Major">Major</option>
+        
+      
+      </select>
+      
+      
+    <br><br>
+      
+      
+      <h2 id = "trainingInfoHeader">Training Information</h2>
+      
+      <br>
+      <h3>Training Dates</h3>
+      <br>
+      
+      <span>Training Start Date:</span>
+      
+     <input type="date" id="startTrainingDate" name="startTrainingDate">
+      
+        <span>Training End Date:</span>
+      
+     <input type="date" id="endTrainingDate" name="endTrainingDate">
+      
+      <br><br>
+      
+      
+       <br>
+      <h3>Training Location</h3>
+      <br>
+      
+      <input type = "text" id="street" placeholder="Address Line">
+      <br><br>
+      <input type = "text" id = "city" placeholder="City">
+      <br><br>
+      <input type = "text" id = "state" placeholder = "State">
+      <br><br>
+      <input type = "number" id = "zip" placeholder="Zip Code">
+      <br><br>
+      
+        <br>
+      <h3>Training Details</h3>
+      <br>
+      
+      <input type = "text" id="courseName" placeholder="Course Name">
+      <br><br>
+      <input type = "text" id="eventType" placeholder="Course Type">
+      <br><br>
+      <input type = "number" id="courseCost" placeholder="Tuition Cost">
+      <br><br>
+      
+      <br>
+      <div>Grading Type</div>
+      <br>
+      
+      <select id = "gradingFormat">
+          <option value="Letter Grade">Letter Grade</option>
+          <option value="Pass/Fail">Pass Fail</option>
+          <option value="Completion">Completion</option>
+      </select>
+      
+      <br><br> <br><br>
+      <input type = "text" id = "justificationText" placeholder="Purpose of the training as it relates to your work">
+      
+         <br><br> <br><br>
+      
+     <label for="myfile">Select a file:</label>
+      <input type="file" id="myfile" name="myfile">
+      
+      <br><br> <br><br>
+      
+      
+      
+      <br><br> <br><br> <br><br>
+      
+      
+      
+      
+      
+      
+  <input id = "submitButton" type="submit" value="Submit Application">
+      
+      <br><br> <br><br> <br><br>
+</form>
+    
+    
+    
+</body>
+</html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="../styles/mainstyle.css">
+<script src="../scripts/addReimbursement.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
