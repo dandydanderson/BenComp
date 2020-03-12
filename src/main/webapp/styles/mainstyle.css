@@ -1,6 +1,5 @@
-#justificationText {
-    width: 60%;
-    height: 60px;
-    text-align: left;
+.myJumbotron {
+   background-color: #58a5ef;
+    color: white;
 }
 

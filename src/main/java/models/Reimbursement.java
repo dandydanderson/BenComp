@@ -1,32 +1,52 @@
 package models;
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.Date;
 
 public class Reimbursement {
-	
+	private int reimbursementId;
 	private int employeeId;
-	private LocalDate dateSubmitted;
-	private LocalDate eventDate;
+	private Timestamp dateSubmitted;
+	private Timestamp eventDate;
 	private String approvalState;//this value is actually the manager position
 	private double amount;
 	private String gradingFormat;
 	private boolean active;
-	private LocalDate lastApprovalDate;
+	private Timestamp lastApprovalDate;
 	private String eventType;
+	private String courseName;
+	
+	//String variables to handle json parsing from form
+	
+	public String getCourseName() {
+		return courseName;
+	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+	private String StringdateSubmitted;
+	private String StringeventDate;
+	private String StringlastApprovalDate;
 	
 	
 	
+	public int getReimbursementId() {
+		return reimbursementId;
+	}
+	public void setReimbursementId(int reimbursementId) {
+		this.reimbursementId = reimbursementId;
+	}
 	public int getEmployeeId() {
 		return employeeId;
 	}
 	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;
 	}
-	public LocalDate getEventDate() {
+	public Timestamp getEventDate() {
 		return eventDate;
 	}
-	public void setEventDate(LocalDate eventDate) {
+	public void setEventDate(Timestamp eventDate) {
 		this.eventDate = eventDate;
 	}
 	public String getApprovalState() {
@@ -53,10 +73,10 @@ public class Reimbursement {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
-	public LocalDate getLastApprovalDate() {
+	public Timestamp getLastApprovalDate() {
 		return lastApprovalDate;
 	}
-	public void setLastApprovalDate(LocalDate lastApprovalDate) {
+	public void setLastApprovalDate(Timestamp lastApprovalDate) {
 		this.lastApprovalDate = lastApprovalDate;
 	}
 	public String getEventType() {
@@ -65,11 +85,34 @@ public class Reimbursement {
 	public void setEventType(String eventType) {
 		this.eventType = eventType;
 	}
-	public LocalDate getDateSubmitted() {
+	public Timestamp getDateSubmitted() {
 		return dateSubmitted;
 	}
-	public void setDateSubmitted(LocalDate dateSubmitted) {
+	public void setDateSubmitted(Timestamp dateSubmitted) {
 		this.dateSubmitted = dateSubmitted;
+	}
+	
+	
+	
+	
+	
+	public String getStringdateSubmitted() {
+		return StringdateSubmitted;
+	}
+	public void setStringdateSubmitted(String stringdateSubmitted) {
+		StringdateSubmitted = stringdateSubmitted;
+	}
+	public String getStringeventDate() {
+		return StringeventDate;
+	}
+	public void setStringeventDate(String stringeventDate) {
+		StringeventDate = stringeventDate;
+	}
+	public String getStringlastApprovalDate() {
+		return StringlastApprovalDate;
+	}
+	public void setStringlastApprovalDate(String stringlastApprovalDate) {
+		StringlastApprovalDate = stringlastApprovalDate;
 	}
 	@Override
 	public String toString() {

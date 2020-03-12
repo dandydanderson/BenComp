@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/mainstyle.css">
+
+    </head>
+
+
+    <body>
+
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-dark bg-primary">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a  class="nav-item nav-link active" href="#">New Reimbursement <span class="sr-only">(current)</span></a>
+                        <a id = "navDash" class="nav-item nav-link" href="#">Dashboard</a> 
+                        <a id = "logout" class="nav-item nav-link" href="#">Logout</a>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="jumbotron myJumbotron">
+                <h1 id= "formTitle">Managed Reimbursment</h1>
+            </div>
+
+            <div class="card col-sm-12">
+                <div class="card-header">
+                    <h2 id = "empInfoHeader">Reimbursement Information</h2>
+                </div>
+                <div class="card-body">
+                    <h3>Employee Id:</h3>
+                    <p id = "employeeId"></p>
+                    <h3>First Name:</h3>
+                    <p id = "firstName"></p>
+                    <h3>Last Name:</h3>
+                    <p id = "lastName"></p>
+                    <h3>Department Name:</h3>
+                    <p id = "deptName"></p>
+                    <h3>Reimbursment Award Left:</h3>
+                    <p id = "reimbursementTotal"></p>
+                    <h3>Reimbursement Id:</h3>
+                    <p id = "reimId"></p>
+                    <h3>Course Name:</h3>
+                    <p id = "courseName"></p>
+                    <h3>Date Submitted:</h3>
+                    <p id = "dateSubmitted"></p>
+                    <h3>Event Date:</h3>
+                    <p id = "eventDate"></p>
+                    <h3>Cost:</h3>
+                    <p id = "amount"></p>
+                    <h3>Last Approval Date:</h3>
+                    <p id = "lastApprovalDate"></p>
+
+
+                </div>
+            </div>
+            <br>
+
+            <button id = "approveReim" type="button" class="btn btn-success">Approve Reimbursement</button>
+            <button id = "denyReim" type="button" class="btn btn-danger">Deny Reimbursement</button>
+
+
+
+
+        </div> 
+
+    </body>
+    <script src="../scripts/manageReim.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

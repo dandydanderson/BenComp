@@ -20,7 +20,7 @@ public interface Dao {
 		
 		//UPDATE
 		
-		public void approveReimbursement(int reimbursementId);
+		public void approveReimbursement(int reimbursementId, String approvalState);
 		public void denyReimbursement(int reimbursementId);
 		
 		

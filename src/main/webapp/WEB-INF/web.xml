@@ -10,13 +10,45 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-  <servlet>
-  <servlet-name>ReimbursementServlet</servlet-name>  
-  <servlet-class>com.revature.servlet.ReimbursementServlet</servlet-class>
+  
+ <servlet>
+  	<servlet-name>ReimbursementServlet</servlet-name>
+  	<servlet-class>servlet.ReimbursementServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>ReimbursementServlet</servlet-name>
-  <url-pattern>/reimbursement</url-pattern>
+  	<servlet-name>ReimbursementServlet</servlet-name>
+  	<url-pattern>/reimbursement</url-pattern>
   </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>ManagedReimbursementServlet</servlet-name>
+  	<servlet-class>servlet.ManagedReimbursementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ManagedReimbursementServlet</servlet-name>
+  	<url-pattern>/manageReim</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>ReimbActionServlet</servlet-name>
+  	<servlet-class>servlet.ReimbActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ReimbActionServlet</servlet-name>
+  	<url-pattern>/reimbAction</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>

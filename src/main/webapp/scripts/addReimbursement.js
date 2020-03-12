@@ -1,33 +1,31 @@
 
 class reimbursement{
     
-    constructor(employeeID, dateSubmitted, eventDate, approvalState, amount, gradingFormat, active, lastApprovalDate, eventType){
+    constructor(employeeId, StringeventDate, approvalState, amount, gradingFormat, active, eventType, courseName){
         
-        this.employeeID = employeeID;
-        this.dateSubmitted = dateSubmitted;
-        this.eventDate = eventDate;
+        this.employeeId = employeeId;
+        this.eventDate = StringeventDate;
         this.approvalState = approvalState;
         this.amount = amount;
         this.gradingFormat = gradingFormat;
         this.active = active;
-        this.lastApprovalDate = lastApprovalDate;
         this.eventType = eventType
-      //  this.courseName = courseName;
+        this.courseName = courseName;
     }
     
     
 }
 
-function createReimburesmentFromForm(e){
+function createReimburesmentFromForm(event){
    
+       event.preventDefault(); 
     
-    
-   let date = new Date();
+   //let date = new Date();
     let managerSelect = document.getElementById("managerPosition");
     let gradingSelect = document.getElementById("gradingFormat");
     
-    reim = new reimbursement(document.getElementById("employeeId").value, date.toDateString(), document.getElementById("startTrainingDate").value, managerSelect.options[managerSelect.selectedIndex].value, document.getElementById("courseCost").value, gradingSelect.options[gradingSelect.selectedIndex].value, true, date.toDateString(), document.getElementById("eventType").value);
-    return reim;
+    reim = new reimbursement(document.getElementById("employeeId").value, document.getElementById("startTrainingDate").value, managerSelect.options[managerSelect.selectedIndex].value, document.getElementById("courseCost").value, gradingSelect.options[gradingSelect.selectedIndex].value, true, document.getElementById("eventType").value, document.getElementById("courseName").value);
+    console.log(reim);
     
     
       
@@ -40,15 +38,51 @@ function createReimburesmentFromForm(e){
         }
     }
     
-    xhr.open("POST", "/BenCo/reimbursement",true);
+    xhr.open("POST", "/BenCo/reimbursement", true);
     xhr.send(JSON.stringify(reim));
-   event.preventDefault(e);      
+     
 }
+
+function navBar() {
+    console.log("Getting into navBar Function");
+    
+    document.getElementById("navDash").addEventListener("click", navigateToDashboard);
+}
+
+
+function navigateToDashboard(){
+    
+    
+     console.log("Getting into navigateToDashboard Function");
+    window.location.replace("/BenCo/pages/Dashboard.html");
+    
+}
+
+function logout(){
+    document.getElementById("logout").addEventListener("click",navToLogout);
+    
+}
+
+function navToLogout(){
+    window.location.replace("/BenCo/pages/Login.html")
+}
+
+function dashboardAfterSubmit(){
+    
+document.getElementById("submitButton").addEventListener("click", navigateToDashboard);
+}
+
+
+
 
 
 window.onload = function() {
     
     this.document.getElementById("submitButton").addEventListener("click", createReimburesmentFromForm, false);
+    console.log("onload funciton being reached");
+    this.navBar();
+    this.logout();
+    this.dashboardAfterSubmit();
 }
       
   
